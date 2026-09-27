@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "FWC26";
-  src: url("/public/font/FWC26.otf") format("opentype");
+  src: url("/projet-site-web-iim/public/font/FWC26.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -183,7 +183,7 @@ header {
   width: 100%;
 }
 .image img {
-  mask-image: url(/public/We_Are_26.svg);
+  mask-image: url(/projet-site-web-iim/public/We_Are_26.svg);
   height: 350px;
   width: 82%;
   mask-position: left;
@@ -216,7 +216,7 @@ header {
 /*Création d'une section de sépération via une image d'arrière plan*/
 
 .banderole {
-  background: url(/public/img/histoire.jpg) center center / cover fixed;
+  background: url(/projet-site-web-iim/public/img/histoire.jpg) center center / cover fixed;
   height: 50vh;
 }
 
@@ -447,7 +447,7 @@ object-position: top;
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
-  background: url(/public/img/histoire.jpg) center center / cover;
+  background: url(/projet-site-web-iim/public/img/histoire.jpg) center center / cover;
 }
 .team_type {
   width: 100%;
@@ -617,7 +617,7 @@ object-position: top;
 .c1 .card .verso,
 .c5 .card .verso,
 .c6 .card .verso {
-  background: url(/public/img/france.jpg) center center / cover;
+  background: url(/projet-site-web-iim/public/img/france.jpg) center center / cover;
 }
 .card .verso {
   border-radius: 2rem;
@@ -649,13 +649,13 @@ object-position: top;
 }
 .c2 .card .verso,
 .c7 .card .verso {
-  background: url("/public/img/argentine.webp") center center / cover;
+  background: url("/projet-site-web-iim/public/img/argentine.webp") center center / cover;
 }
 .c3 .card .verso {
-  background: url("/public/img/portugal.webp") center center / cover;
+  background: url("/projet-site-web-iim/public/img/portugal.webp") center center / cover;
 }
 .c4 .card .verso {
-  background: url("/public/img/espagne.jpg") center center / cover;
+  background: url("/projet-site-web-iim/public/img/espagne.jpg") center center / cover;
 }
 .c3 {
   grid-column-start: 4;
@@ -671,7 +671,7 @@ object-position: top;
 
 .contact {
   padding: 2rem;
-  background: url("/public/img/contact_bg.avif") center center / cover;
+  background: url("/projet-site-web-iim/public/img/contact_bg.avif") center center / cover;
 }
 .contact h2 {
   font-size: 100px;

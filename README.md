@@ -13,7 +13,7 @@ Le site présente la compétition, les pays hôtes, son histoire, quelques stati
 ## Structure
 
 ```text
-Fifa_web/
+/
 ├── index.html
 ├── style.css
 ├── script.js

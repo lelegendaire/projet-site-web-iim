@@ -21,12 +21,6 @@ Fifa_web/
     └── img/
 ```
 
-
-```bash
-git clone <url-du-repository>
-cd Fifa_web
-```
-
 ## Projet
 
 Projet réalisé dans le cadre d'un projet web autour de la Coupe du monde 2026.

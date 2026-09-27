@@ -1,0 +1,1031 @@
+/*Importation des polices d'écritures*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "FWC26";
+  src: url("/Fifa_web/public/font/FWC26.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*Initialisation des variables de couleurs*/
+* {
+  font-family: "Noto Sans";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  --brown-color: #751212;
+  --red-color: #d60000;
+  --orange-color: #ff3d00;
+  --beige-color: #ff9e7f;
+  --darkblue-color: #6100eb;
+  --lightblue-color: #b287ff;
+  --pink-color: #ba69c7;
+  --pink-color-trans: #ba69c79f;
+  --darkpurple-color: #1a247d;
+  --lightpurple-color: #304fff;
+  --azure_blue-color: #2196f2;
+  --darkgreen-color: #004d40;
+  --green-color: #00c752;
+  --lightgreen-color: #b0eb00;
+  --yellow-color: #edff42;
+  --yellow-color-trans: #ecff4289;
+  scroll-behavior: smooth;
+}
+/*Initialisation des éléments généraux*/
+body {
+  overflow-x: hidden;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+h2,
+h3 {
+  font-family: "FWC26";
+}
+section {
+  height: 100vh;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+ul li a:hover {
+  color: var(--yellow-color);
+}
+/*En-tête de la page*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 20vh;
+}
+.nav {
+  display: flex;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.logo {
+  width: 70px;
+  height: 100px;
+  position: relative;
+  z-index: 3;
+}
+.logo::before {
+  content: "";
+  width: 90px;
+  height: 60px;
+  background-color: red;
+  position: absolute;
+  display: flex;
+  top: 20%;
+  left: -14%;
+  border-radius: 1rem;
+}
+.logo img {
+  background-color: black;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+.nav_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: black;
+  padding: 0.75rem;
+  width: 250px;
+  z-index: 2;
+}
+.border_line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 580px;
+  height: 49px;
+  top: 31%;
+  border-radius: 1rem;
+  position: absolute;
+  overflow: hidden;
+}
+.line_h {
+  height: 70px;
+}
+.green {
+  background-color: var(--green-color);
+  width: 100%;
+}
+.red {
+  background-color: var(--red-color);
+  width: 100%;
+}
+.lightgreen {
+  background-color: var(--lightgreen-color);
+  width: 100%;
+}
+.blue {
+  background-color: var(--lightblue-color);
+  width: 100%;
+}
+.nav_link li {
+  list-style: none;
+}
+.nav_link li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.gauche {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.droite {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.nav .nav_link.gauche {
+  animation: animation_bar_left 1s;
+}
+.nav .nav_link.droite {
+  animation: animation_bar_right 1s;
+}
+.nav .border_line {
+  animation: animation_bar_middle 1s;
+}
+.nav .nav_link.droite {
+  animation: animation_bar_right 1s;
+}
+.logo {
+  animation: animation_logo_size 1s;
+}
+/*Création de la section hero*/
+
+.hero_banner {
+  background-color: white;
+}
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.image img {
+  mask-image: url(/Fifa_web/public/We_Are_26.svg);
+  height: 350px;
+  width: 82%;
+  mask-position: left;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero a {
+  padding: 0.75rem 1.25rem;
+  background-color: black;
+  border: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  color: white;
+  border-radius: 30px;
+  width: 100px;
+  box-shadow: 0px 0px 0px var(--green-color);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+.hero a:hover {
+  box-shadow: 2px 4px 0px var(--green-color);
+}
+.hero a {
+  animation: animation_btn 1s;
+}
+/*Création d'une section de sépération via une image d'arrière plan*/
+
+.banderole {
+  background: url(/Fifa_web/public/img/histoire.jpg) center center / cover fixed;
+  height: 50vh;
+}
+
+/*Création d'une section histoire*/
+
+.histoire {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.histoire .présentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+.histoire .présentation h1 {
+  color: var(--darkblue-color);
+  font-family: "FWC26";
+  font-size: 80px;
+  text-align: center;
+}
+.histoire .présentation p {
+  color: var(--darkblue-color);
+  width: 800px;
+  text-align: center;
+}
+.histoire .présentation h1,
+.histoire .présentation p {
+  animation: animation_scale both;
+  animation-timeline: view(70% 15%);
+}
+.histoire span {
+  margin-top: 1rem;
+}
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  gap: 1rem;
+  margin: 5rem 0px;
+}
+.img {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  overflow: hidden;
+}
+.img.mex {
+  background-color: var(--green-color);
+  animation: animation_mex both;
+  animation-timeline: view(70% 15%);
+}
+.img.usa {
+    background-color: var(--azure_blue-color);
+    animation: animation_usa both;
+    animation-timeline: view(70% 15%);
+}
+.img.can {
+    background-color: var(--red-color);
+  animation: animation_can both;
+  animation-timeline: view(70% 15%);
+}
+.premiere_histoire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.deuxieme_histoire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+.description_hist {
+  width: 50%;
+
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.premiere_histoire .description_hist {
+  color: var(--brown-color);
+}
+.deuxieme_histoire .description_hist {
+  color: var(--pink-color);
+  text-align: end;
+}
+.deuxieme_histoire .description_hist {
+  align-items: end;
+}
+.description_hist h2 {
+  font-size: 60px;
+}
+.description_hist p {
+  width: 300px;
+}
+.img_link_hist {
+  width: 50%;
+  height: 500px;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.img_link_hist img {
+object-position: top;
+}
+.premiere_histoire .img_link_hist {
+  animation: autoShowanimation_right both;
+  animation-timeline: view(90% auto);
+}
+.premiere_histoire .description_hist {
+  animation: autoShowanimation_left both;
+  animation-timeline: view(90% auto);
+}
+.deuxieme_histoire .img_link_hist {
+  animation: autoShowanimation_left both;
+  animation-timeline: view(70% 5%);
+}
+.deuxieme_histoire .description_hist {
+  animation: autoShowanimation_right both;
+  animation-timeline: view(70% 5%);
+}
+/*Création d'une section palmarès*/
+
+.line {
+  width: 10px;
+  height: 100%;
+  margin-left: 10px;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: absolute;
+}
+.line_palma_h {
+  width: 10px;
+  height: 100%;
+}
+.palmares {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: black;
+  height: 300vh;
+  position: relative;
+  gap: 18rem;
+}
+.bloc_verticale{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8rem;
+
+}
+.bloc_stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.bloc_stat .desc_bloc{
+     animation: autoShowanimation_left both;
+  animation-timeline: view(90% auto);
+}
+.bloc_stat .image_bloc{
+     animation: autoShowanimation_right both;
+  animation-timeline: view(90% auto);
+}
+.bloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  
+}
+.image_bloc{
+    border-radius: 2rem;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+ 
+  
+}
+.desc_bloc {
+  border-radius: 2rem;
+  width: 60%;
+  height: 100%;
+  padding: 1rem;
+  
+}
+.bloc_verticale .bloc_stat:nth-child(1) .bloc .desc_bloc{
+    background-color: var(--azure_blue-color);
+}
+.bloc_verticale .bloc_stat:nth-child(2) .bloc  .desc_bloc{
+    background-color: var(--beige-color);
+}
+.bloc_verticale .bloc_stat:nth-child(3) .bloc  .desc_bloc{
+    background-color: var(--brown-color);
+}
+.bloc_verticale .bloc_stat:nth-child(4) .bloc  .desc_bloc{
+    background-color: var(--darkblue-color);
+}
+.bloc_verticale .bloc_stat:nth-child(5) .bloc  .desc_bloc{
+    background-color: var(--darkgreen-color);
+}
+/*Création d'un section joueur*/
+
+.joueur {
+  height: 110vh;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  background: url(/Fifa_web/public/img/histoire.jpg) center center / cover;
+}
+.team_type {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.687);
+  border-radius: 1rem;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+.composition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.list_stat {
+  width: 30%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.457);
+  border-radius: 1rem;
+  padding: 0.75rem 1.25rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+    animation: animation_mex both;
+    animation-timeline: view(90% auto);
+}
+.stat {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.best_team {
+  background-color: var(--beige-color);
+}
+.def_team {
+  background-color: var(--pink-color);
+}
+.best_team,.def_team{
+    
+      animation: animation_mex both;
+      animation-timeline: view(50% 15%);
+
+  
+}
+.compo {
+  width: 70%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.457);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  backdrop-filter: blur(10px);
+  animation: animation_can both;
+  animation-timeline: view(90% auto);
+}
+.attaquant {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.milieux {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.latéraux {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 5rem;
+}
+.def {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
+}
+
+.joueur_xi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.joueur_xi .xi_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.joueur_xi .xi_img img {
+  object-position: top;
+}
+/*Création d'une section record*/
+
+.record {
+  padding: 2rem;
+  width: 100%;
+  height: 110vh;
+}
+.record h2 {
+  font-size: 80px;
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+  width: 200px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+.case {
+  width: 250px;
+  height: 250px;
+
+  grid-row: span 2 / span 2;
+  perspective: 1000px;
+}
+.card {
+  border-radius: 2rem;
+  background-color: red;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.case:hover .card {
+  transform: rotateY(180deg);
+}
+.recto,
+.verso {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recto img {
+  border-radius: 2rem;
+  object-position: top;
+}
+.verso {
+  transform: rotateY(180deg);
+  padding: 1rem;
+}
+.c1 .card .verso,
+.c5 .card .verso,
+.c6 .card .verso {
+  background: url(/Fifa_web/public/img/france.jpg) center center / cover;
+}
+.card .verso {
+  border-radius: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.gras {
+  font-weight: 900;
+}
+.card .verso::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  background-image: linear-gradient(transparent, black);
+}
+.card .verso p {
+  z-index: 2;
+}
+.c1 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.c2 {
+  grid-column-start: 3;
+}
+.c2 .card .verso,
+.c7 .card .verso {
+  background: url("/Fifa_web/public/img/argentine.webp") center center / cover;
+}
+.c3 .card .verso {
+  background: url("/Fifa_web/public/img/portugal.webp") center center / cover;
+}
+.c4 .card .verso {
+  background: url("/Fifa_web/public/img/espagne.jpg") center center / cover;
+}
+.c3 {
+  grid-column-start: 4;
+}
+.c4 {
+  grid-row-start: 3;
+}
+.c5 {
+  grid-row-start: 3;
+}
+
+/*Création d'une section contact*/
+
+.contact {
+  padding: 2rem;
+  background: url("/Fifa_web/public/img/contact_bg.avif") center center / cover;
+}
+.contact h2 {
+  font-size: 100px;
+  color: white;
+}
+.formulaire form {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formulaire input,
+.formulaire textarea {
+  padding: 0.25rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 0.4rem;
+  width: 30%;
+  color: white;
+  backdrop-filter: blur(10px);
+  outline: none;
+}
+#nom,
+#email,
+#tel,
+#msg{
+      animation: animation_mex both;
+      animation-timeline: view(70% 15%);
+
+  }
+.formulaire input {
+  height: 40px;
+}
+.formulaire input::placeholder {
+  color: white;
+}
+.formulaire textarea {
+  height: 100px;
+}
+
+/*Pied de page*/
+
+footer {
+  padding: 2rem 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background-color: var(--azure_blue-color);
+}
+.nav_footer_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+.nav_footer_link .newsletter {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: auto;
+}
+.nav_footer_link input {
+  padding: 0.25rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 0.4rem;
+  outline: none;
+  color: white;
+}
+.nav_footer_link button {
+  padding: 0.25rem;
+  background: white;
+  border: 2px solid white;
+  border-radius: 0.4rem;
+}
+.nav_footer_link .newsletter h2 {
+  font-size: 60px;
+  width: 400px;
+}
+.nav_footer_link .nav_link_column {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+}
+.nav_link_column h3 {
+  font-weight: 700;
+  color: var(--lightpurple-color);
+}
+
+.logo_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+.logo_footer h2 {
+  width: 80%;
+  font-size: 150px;
+  height: 160px;
+   animation: animation_scale both;
+  animation-timeline: view(70% 15%);
+}
+.copywrite {
+  margin-right: auto;
+  padding: 2rem;
+  margin-top: auto;
+}
+footer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Initialisation des animations*/
+
+@keyframes animation_logo_size {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes animation_bar_middle {
+  from {
+    opacity: 0;
+    width: 0px;
+  }
+  to {
+    opacity: 1;
+    width: 580px;
+  }
+}
+@keyframes animation_bar_left {
+  from {
+    opacity: 0;
+    width: 0px;
+  }
+  to {
+    opacity: 1;
+    width: 250px;
+  }
+}
+@keyframes animation_bar_right {
+  from {
+    opacity: 0;
+    width: 0px;
+  }
+  to {
+    opacity: 1;
+    width: 250px;
+  }
+}
+
+@keyframes autoShowanimation_left {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes autoShowanimation_right {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animation_btn {
+  from {
+    opacity: 0;
+    transform: scale(10%);
+  }
+  to {
+    opacity: 1;
+    transform: scale(100%);
+  }
+}
+@keyframes animation_scale {
+  from {
+    transform: scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+@keyframes animation_mex {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes animation_usa {
+  from {
+    transform: scale(0%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+@keyframes animation_can {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/*Initialisation du responsive*/
+
+/* Taille téléphone*/
+@media only screen and (max-width: 600px) {
+  section {
+    height: 100%;
+  }
+  .hero_banner {
+    height: 100vh;
+  }
+  .border_line {
+    width: 80px;
+  }
+  .nav_link {
+    width: 120px;
+    height: 120px;
+    flex-direction: column;
+  }
+  .histoire .présentation p {
+    width: 100%;
+  }
+  .histoire .présentation h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .banderole {
+    background-size: contain;
+  }
+  .img_link_hist {
+    height: 250px;
+  }
+  .description_hist h2 {
+    font-size: 30px;
+  }
+  .description_hist p {
+    width: 100%;
+  }
+  .palmares{
+    height: 100%;
+  }
+  .bloc_stat{
+    flex-direction: column;
+  }
+  .bloc{
+    width: 100%;
+  }
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  .joueur {
+    height: 100%;
+  }
+  .def {
+    gap: 10rem;
+  }
+  .composition {
+    flex-direction: column;
+  }
+  .list_stat {
+    width: 100%;
+  }
+  .compo {
+    width: 100%;
+  }
+  .record {
+    height: 100%;
+  }
+  .contact h2 {
+    font-size: 50px;
+  }
+  .formulaire input,
+  .formulaire textarea {
+    width: 100%;
+}
+
+  footer {
+    height: 100%;
+  }
+  .nav_footer_link .newsletter h2 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .nav_footer_link {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .logo_footer {
+    margin-top: 1rem;
+  }
+  .logo_footer h2 {
+    font-size: 40px;
+    height: 100%;
+    white-space: nowrap;
+  }
+}
+
+/*Taille Tablette*/
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .joueur,
+    .contact,
+    .palmares,
+    footer
+    {
+        height: 100%;
+    }
+    
+      
+    .bloc_verticale{
+        gap: 2rem;
+    }
+    .case{
+        width: 150px;
+        height: 150px;
+    }
+    .logo_footer {
+        margin-top: 0;
+    }
+    .logo_footer h2{
+        font-size: 75px;
+        text-align: center;
+    }
+}
+
+/*Fichier joueur.html */
+.Description_section_joueur{
+    height: 100%;
+}

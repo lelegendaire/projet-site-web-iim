@@ -16,9 +16,10 @@ Le site présente la compétition, les pays hôtes, son histoire, quelques stati
 /
 ├── index.html
 ├── style.css
-├── script.js
 └── public/
     └── img/
+    └── font/
+
 ```
 
 ## Projet
